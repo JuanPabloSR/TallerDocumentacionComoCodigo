@@ -1,0 +1,24 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+left to right direction
+title "Casos de uso"
+actor :Vendedor: as user
+skinparam actorStyle awesome
+package BrujulaRafting{
+usecase "Agregar Deporte" as uc1
+usecase "Actualizar Deporte" as uc2
+usecase "Eliminar Deporte" as uc3
+usecase "Consultar Deporte por Id" as uc4
+usecase "Listar Deportes" as uc5
+
+}
+
+user --> uc1
+user --> uc2
+user --> uc3
+user --> uc4
+user --> uc5
+
+
+@enduml

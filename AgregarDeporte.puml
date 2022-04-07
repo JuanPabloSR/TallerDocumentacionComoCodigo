@@ -1,0 +1,15 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+autonumber
+
+participant vendedor as user
+boundary InterfazUsuario as ui
+
+user -> ui: Petición para agregar un deporte
+ui --> API: Redireccióna petición
+database Mongo as db
+API --> db: Pide agregar un recurso
+db --> API: Agrega el recurso
+API --> ui: Transmite una respuesta
+ui --> user: Traduce y entrega una respuesta satisfactoria
+@enduml

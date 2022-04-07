@@ -1,0 +1,16 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+participant vendedor as user
+boundary InterfazUsuario as ui
+
+user -> ui: Petición para eliminar un deporte
+ui -->API: a petición
+
+database Mongo as db
+API --> db: Pide consultar y eliminar el deporte
+db --> API: Elimina el deporte
+API --> ui: Transmite una respuesta
+ui --> user: Traduce y entrega una respuesta satisfactoria
+@enduml
